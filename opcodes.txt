@@ -1,0 +1,128 @@
+NOP - 00 No operation
+LDA(address) - 01 Load A
+LDB(address) - 02 Load B
+LDC(address) - 03 Load C
+LDA_D - 04 Load A Dynamic
+LDB_D - 05 Load B Dynamic
+LDC_D - 06 Load C Dynamic
+STA(address) - 07 Store A
+STB(address) - 08 Store B
+STC(address) - 09 Store B
+STA_D - 0a Store A Dynamic
+STB_D - 0b Store B Dynamic
+STC_D - 0c Store C Dynamic
+STI(value) - 0d Store Immediate
+IDA(value) - 0e Immediate A
+IDB(value) - 0f Immediate B
+IDC(value) - 10 Immediate C
+ATB - 11 A to B
+ATC - 12 A to C
+BTA - 13 B to A
+BTC - 14 B to C
+CTA - 15 C to A
+CTB - 16 C to B
+PCA - 17 Program Counter A
+PCB - 18 Program Counter B
+PCC - 19 Program Counter C
+PUSHA - 1a Push A
+PUSHB - 1b Push B
+PUSHC - 1c Push C
+PUSHI(value) - 1d Push Immediate
+PUSHM(address) - 1e Push Memory
+PUSHM_D - 1f Push Memory Dynamic
+POPA - 20 Pop A
+POPB - 21 Pop B
+POPC - 22 Pop C
+POPM(address) - 23 Pop Memory
+POPM_D - 24 Pop Memory Dynamic
+ADD - 25 Add
+SUB - 26 Subtract
+MUL - 27 Multiply
+DIV - 28 Divide
+MOD - 29 Modulo
+SHL - 2a Shift Left
+SHR - 2b Shift Right
+AND - 2c Bitwise AND
+OR - 2d Bitwise OR
+XOR - 2e Bitwise XOR
+CMP - 2f Compare
+ADDI(value) - 30 Add Immediate
+SUBI(value) - 31 Subtract Immediate
+MULI(value)- 32 Multiply Immediate
+DIVI(value) - 33 Divide Immediate
+MODI(value) - 34 Modulo Immediate
+SHLI(value) - 35 Shift Left Immediate
+SHRI(value) - 36 Shift Right Immediate
+ANDI(value) - 37 Bitwise AND Immediate
+ORI(value) - 38 Bitwise OR Immediate
+XORI(value) - 39 Bitwise XOR Immediate
+CMPI(value) - 3a Compare
+ADD_NA - 3b Add Not Accumilative
+SUB_NA - 3c Subtract Not Accumilative
+MUL_NA - 3d Multiply Not Accumilative
+DIV_NA - 3e Divide Not Accumilative
+MOD_NA - 3f Modulo Not Accumilative
+SHL_NA - 40 Shift Left Not Accumilative
+SHR_NA - 41 Shift Right Not Accumilative
+AND_NA - 42 Bitwise AND Not Accumilative
+OR_NA - 43 Bitwise OR not Accumilative
+XOR_NA - 44 Bitwise XOR Not Accumilative
+RNG - 45 Random Number Generator
+ADDM_D - 46 Add Memory Dynamic
+SUBM_D - 47 Subtract Memory Dynamic
+MULM_D - 48 Multiply Memory Dynamic
+DIVM_D - 49 Divide Memory Dynamic
+MODM_D - 4a Modulo Memory Dynamic
+SHLM_D - 4b Shift Left Memory Dynamic
+SHRM_D - 4c Shift Right Memory Dynamic
+ANDM _D- 4d Bitwise AND Memory Dynamic
+ORM_D - 4e Bitwise OR Memory Dynamic
+XORM_D - 4f Bitwise Xor Memory Dynamic
+CMPM_D - 50 Compare Memory Dynamic
+JMP(address) - 51 Jump
+JMZ(address) - 52 Jump If Zero
+JMC(address) - 53 Jump If Carry
+JMN(address) - 54 Jump If Negative
+JML(address) - 55 Jump If Lesser
+JME(address) - 56 Jump If Equal
+JMG(address) - 57 Jump If Greater
+JMPL(address) - 58 Jump Link
+JMNZ(address) - 59 Jump If Not Zero
+JMNC(address) - 5a Jump If Not Carry
+JMNN(address) - 5b Jump If Not Negative
+JMGE(address) - 5c Jump If Greater or Equal
+JMNE(address) - 5d Jump If Not Equal
+JMLE(address) - 5e Jump If Lesser or Equal
+JMP_D - 5f Jump Dynamic
+JMZ_D  - 60 Jump If Zero Dynamic
+JMC_D - 61 Jump If Carry Dynamic
+JMN_D  - 61 Jump If Negative Dynamic
+JML_D  - 63 Jump If Lesser
+JME_D  - 64 Jump If Equal
+JMG_D  - 65 Jump If Greater
+JMPL_D - 66 Jump Link Dynamic
+JMNZ_D  - 67 Jump If Not Zero Dynamic
+JMNC_D - 68 Jump If Not Carry Dynamic
+JMNN_D  - 69 Jump if Not Negative Dynamic
+JMGE_D  - 6a Jump If Greater or Equal
+JMNE_D  - 6b Jump If Not Equal
+JMLE_D  - 6c Jump If Less or Equal
+DV0 - 6d Device 0
+DV1 - 6e Device 1
+DV2 - 6f Device 2
+DV3 - 70 Device 3
+OUTA - 71 Output A
+OUTB - 72 Output B
+OUTC - 73 Ouputt C
+OUTM(address) - 74 Output Memory
+OUTM_D - 75 Output Memory Dynamic
+DLY(value) - 76 Delay
+INA - 77 Input A
+INB - 78 Input B
+INC - 79 Input C
+INM(address) - 7a Input Memory
+INM_D - 7b Input Memory Dynamic
+DLY_D - 7c Delay Dynamic
+OUTPS - 7d Output Port Switch
+INPS - 7e Input Port Switch
+HALT - 7f Halt
