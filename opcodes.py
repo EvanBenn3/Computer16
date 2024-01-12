@@ -287,7 +287,7 @@ def opcodes(cpu):
         cpu.setFlags(cpu.reg_A)
 
     if opcode == 0x45: #RNG
-        cpu.reg_A = randint(0, 0xFFFF)
+        cpu.reg_A = randint(0, parameter)
 
     if opcode == 0x46: #ADDM_D
         cpu.reg_memoryAddress = cpu.reg_C
