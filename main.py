@@ -14,7 +14,7 @@ display = Screen()
 log = False
 logDataMemoryRange = (0, 10)
 logCallStackRange = (0, 10)
-simSpeed = 10 # Speed that simulation runs at in iterations per second
+simSpeed = 100 # Speed that simulation runs at in iterations per second
 
 with open("cpu_log.txt", "w") as log_file:
 
@@ -22,10 +22,10 @@ with open("cpu_log.txt", "w") as log_file:
     while cpu.halt == False:
         # Actual Simulation v
         cpu.update()
-
-        #currently does nothing
+        
         if cpu.io_output_port == False:
             display.screen_io(cpu)
+        display.display()
         
         # Actual Simulation ^
 
