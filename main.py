@@ -11,10 +11,12 @@ cpu.dataMemory[:len(memory)] = memory
 
 display = Screen()
 
-log = False
+log = True
 logDataMemoryRange = (0, 10)
 logCallStackRange = (0, 10)
 simSpeed = 100 # Speed that simulation runs at in iterations per second
+
+executedInstructions = 0
 
 with open("cpu_log.txt", "w") as log_file:
 
@@ -22,11 +24,21 @@ with open("cpu_log.txt", "w") as log_file:
     while cpu.halt == False:
         # Actual Simulation v
         cpu.update()
-        
+        executedInstructions += 1
+
         if cpu.io_output_port == False:
-            display.screen_io(cpu)
-        display.display()
+            if (cpu.io_device_signal_a == True) and (cpu.io_device_signal_b == False):
+                display.pos = cpu.reg_output
+            if (cpu.io_device_signal_a == False) and (cpu.io_device_signal_b == True):
+                display.color = cpu.reg_output
+            if (cpu.io_device_signal_a == True) and (cpu.io_device_signal_b == True):
+                display.update()
+
+        # print(cpu.io_device_signal_a, cpu.io_device_signal_b)
         
+        display.root.update_idletasks()
+        display.root.update()
+
         # Actual Simulation ^
 
         if log:
@@ -64,5 +76,7 @@ if log == False:
     for level in range(logCallStackRange[0], logCallStackRange[1] + 1):
         print(f"{cpu.callStack[level]}, ", end="")
     print("\n")
+
+print(f"Computer halted after executing {executedInstructions} instructions with no issues.")
 
 print("Computer Halted With No Issues")
