@@ -39,9 +39,13 @@ with open("cpu_log.txt", "w") as log_file:
             log_file.write("Data Memory Addresses {}\n".format(logDataMemoryRange))
             for address in range(logDataMemoryRange[0], logDataMemoryRange[1] + 1):
                 log_file.write(f"{cpu.dataMemory[address]}, ")
+            log_file.seek(log_file.tell() - 2)
+            log_file.truncate()
             log_file.write("\nCall Stack Levels {}\n".format(logCallStackRange))
             for level in range(logCallStackRange[0], logCallStackRange[1] + 1):
                 log_file.write(f"{cpu.callStack[level]}, ")
+            log_file.seek(log_file.tell() - 2)
+            log_file.truncate()
             log_file.write("\n\n")
 
         #for simulation speed
